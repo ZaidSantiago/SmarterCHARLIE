@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#backgroundButton {
+  background-color: rgb(80, 80, 80);
+  border: none;
+  border-radius: 15px;
+  width: fit-content;
+  height: 5%;
+  margin-top: .5%;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #343541;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gif-background {
+  background-image: url(img/matrix.gif);
+}
+
+#chat_container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+/* hides scrollbar */
+#chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.ai {
+  background: #40414f79;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+
+  background: #5436DA;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  background: #10a37f;
+}
+
+.profile img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+
+  color: #dcdcdc;
+  font-size: 20px;
+
+  max-width: 100%;
+  overflow-x: scroll;
+
+  white-space: pre-wrap; 
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #40414F;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+
+  color: #fff;
+  font-size: 18px;
+
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+form img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Style the entire table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin: 1em 0;
+  
+}
+
+/* Style table headers */
+th {
+  background-color: #686868;
+  font-weight: bold;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Style table cells */
+td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Add hover effect to table rows */
+tr:hover {
+  background-color: #444444;
+}
+
+/* Style the code block container in dark mode */
+pre {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+/* Style the code itself in dark mode */
+code {
+  font-family: Consolas, Monaco, 'Courier New', monospace;
+  font-size: 14px;
+  color: #fff; /* Light text color */
+}
+
+/* Italics */
+em {
+  font-style: italic;
+}
+
+/* Lists */
+ul, ol {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  padding-left: 25px;
+}
+
+
+
+/* Links */
+a {
+  color: #0078d4; /* Link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid #ccc;
+  padding: 0.5em 10px;
+  margin: 0;
+}
+
+/* Horizontal Rules */
+hr {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 1em 0;
+}
+
+/* Strikethrough */
+del {
+  text-decoration: line-through;
+}
+
+/* Superscript and Subscript */
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.5em;
+}
+
+sup {
+  top: -0.8em;
+}
+
+sub {
+  top: 0.2em;
+}
