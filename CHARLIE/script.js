@@ -5,7 +5,7 @@ const message = document.getElementById('message');
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
-const botImageURL = 'img/bot.svg';
+const botImageURL = 'img/bot-61bdb6bf.svg';
 const userImageURL = 'img/user.svg';
 let loadInterval
 
@@ -194,7 +194,7 @@ form.addEventListener('submit', (e) => {
     loader(messageDiv)
     
     
-    fetch('http://localhost:3000', {
+    fetch('https://smartcharlie.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
