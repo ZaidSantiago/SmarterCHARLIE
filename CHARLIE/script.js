@@ -6,7 +6,7 @@ const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
 const botImageURL = 'img/bot-61bdb6bf.svg';
-const userImageURL = 'img/user.svg';
+const userImageURL = 'img/user-bcdeb18e.svg';
 let loadInterval
 
 document.getElementById('backgroundButton').addEventListener('click', function () {
