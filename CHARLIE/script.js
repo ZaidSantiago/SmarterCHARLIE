@@ -48,7 +48,7 @@ function typeText(element, texts) {
             
         } else {
             clearInterval(interval)
-            messageDiv.innerHTML = marked(data.completion.content);
+            element.innerHTML = marked(texts);
             if (texts.includes("hi") || texts.includes("Hi"))  {
               console.log("hi");
             }
