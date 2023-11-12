@@ -115,7 +115,7 @@ function typeText(element, texts) {
               window.open('https://www.youtube.com/watch?v=6HoyuPW9vcw');
             }
             if (texts.toLowerCase().includes("searching for")) {
-              const searchQuery = texts.replace("Searching for", "").trim() && texts.replace("On Google" , "").trim();
+              const searchQuery = texts + texts.replace("Searching for", "").trim() + texts.replace("...","").trim() + texts.replace(".","").trim();
               const encodedQuery = encodeURIComponent(searchQuery); // Encode the query
             
               // Construct the Google search URL
