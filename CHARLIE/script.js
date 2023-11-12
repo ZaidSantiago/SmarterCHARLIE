@@ -48,6 +48,7 @@ function typeText(element, texts) {
             
         } else {
             clearInterval(interval)
+            messageDiv.innerHTML = marked(data.completion.content);
             if (texts.includes("hi") || texts.includes("Hi"))  {
               console.log("hi");
             }
@@ -211,18 +212,16 @@ form.addEventListener('submit', (e) => {
         messageDiv.innerHTML = ''
         const parsedData = data.completion.content.trim()
         typeText(messageDiv, parsedData)
-        setTimeout(() => {
-          messageDiv.innerHTML = marked(data.completion.content); // Apply marked to AI responses
-        }, data.completion.content.length * 40);
+        
     })
 })
 
 message.addEventListener('keydown', (e) => {
-    if (e.key === "Enter" && e.shiftKey) { // Check if Shift key is also pressed
+    if (e.key === "Enter" && e.shiftKey) { 
         return
     }
     else if (e.key === "Enter") {
-      e.preventDefault(); // Prevent default behavior of Enter key
-      form.dispatchEvent(new Event("submit")); // Manually trigger the form's submit event
+      e.preventDefault();
+      form.dispatchEvent(new Event("submit")); 
   }
 });
