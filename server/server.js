@@ -39,6 +39,8 @@ app.post("/", async (req, res) => {
             {"role": "assistant", "content": `Opening Chess with CHARLIE`},
             {"role": "user", "content": `Show me Kevin`},
             {"role": "assistant", "content": `Sure i'll show you Kevin, please wait while I load up the image for you...`},
+            {"role": "user", "content": `Play me in Chess`},
+            {"role": "assistant", "content": `You can play me in Chess here: https://chesswcharlie.zspc.org/`},
             ...messages
             // {"role": "user", "content": `${message}`},
         ],
