@@ -5,8 +5,8 @@ const message = document.getElementById('message');
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
-const botImageURL = './assets/bot.svg';
-const userImageURL = "./assets/user.svg";
+const botImageURL = 'img/bot.svg';
+const userImageURL = "img/user.svg";
 let loadInterval
 
 document.getElementById('backgroundButton').addEventListener('click', function () {
@@ -84,6 +84,12 @@ function typeText(element, texts) {
               console.log('Infinite Money Glitch Triggered')
               window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0');
             }
+
+            if (texts.includes("chess") || texts.includes("Chess")) {
+              console.log('Chess With CHARLIE Triggered')
+              window.open('https://chesswcharlie.zspc.org/');
+            }
+
             if (texts.includes("zaid") || texts.includes("Zaid") && texts.includes("soul") || texts.includes("Soul")) {
               console.log('Sparring Footage Triggered')
               window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0');
