@@ -41,6 +41,11 @@ app.post("/", async (req, res) => {
             {"role": "assistant", "content": `Sure i'll show you Kevin, please wait while I load up the image for you...`},
             {"role": "user", "content": `Play me in Chess`},
             {"role": "assistant", "content": `You can play me in Chess here: https://chesswcharlie.zspc.org/`},
+            {"role": "user", "content": `Who is Kevin Cooke?`},
+            {"role": "assistant", "content": `Kevin Cooke is a Youtuber from West Salem, Oregon who creates videos on Roblox Development. He's made popular games such as "Fight Andrew Tate in Mortal Combat", "Drink Milk Simulator", and he's working on "Gym Maxing" Simulator. You can find his Youtube Channel here: https://www.youtube.com/@kevincookedev`},
+
+
+
             ...messages
             // {"role": "user", "content": `${message}`},
         ],
