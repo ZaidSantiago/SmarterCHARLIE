@@ -108,12 +108,12 @@ function typeText(element, texts) {
             
             if (texts.includes("print kevin") || texts.includes("Print Kevin")) {
               console.log('print kevin triggered')
-              print('img/kevin.pdf');
+              print('https://www.youtube.com/@kevincookedev');
             }
         
             if (texts.includes("kevin") || texts.includes("Kevin")) {
               console.log('kevin triggered')
-              window.open('img/kevin.pdf');
+              window.open('https://www.youtube.com/@kevincookedev');
             }
             
              if (texts.includes("canelo") || texts.includes("Canelo")) {
