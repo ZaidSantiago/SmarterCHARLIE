@@ -5,7 +5,7 @@ const message = document.getElementById('message');
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
-const botImageURL = 'img/bot.svg';
+const botImageURL = '/assets/bot-61bdb6bf.svg';
 const userImageURL = "img/user.svg";
 let loadInterval
 
