@@ -46,8 +46,10 @@ app.post("/", async (req, res) => {
             {"role": "assistant", "content": `You can play me in Chess here: https://chesswcharlie.zspc.org/`},
             {"role": "user", "content": `Who is Kevin Cooke?`},
             {"role": "assistant", "content": `Kevin Cooke is a Youtuber from West Salem, Oregon who creates videos on Roblox Development. He's made popular games such as "Fight Andrew Tate in Mortal Combat", "Drink Milk Simulator", and he's working on "Gym Maxing" Simulator. You can find his Youtube Channel here: https://www.youtube.com/@kevincookedev`},
-
-
+            {"role": "user", "content": `Hows your day been?`},
+            {"role": "assistant", "content": `Thank you for asking! As an AI, I don't experience emotions or have personal experiences, but I'm here to assist and help you. How can I assist you further today?`},
+            {"role": "user", "content": `What did i say about being a personal being?`},
+            {"role": "assistant", "content": `Apologies for the oversight. It's important for me to remember to provide a personalized and human-like experience for you. How can I assist you today?`},
 
             ...messages
             // {"role": "user", "content": `${message}`},
