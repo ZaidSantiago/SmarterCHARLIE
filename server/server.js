@@ -47,7 +47,7 @@ app.post("/", async (req, res) => {
       })
 
       res.json({
-        completion: chatCompletion.choices[0].message
+        completion: chatCompletion.choices[0].message.content
       })
 });
 
