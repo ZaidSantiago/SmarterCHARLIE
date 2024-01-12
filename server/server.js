@@ -3,8 +3,7 @@ import express from "express"
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import * as dotenv from 'dotenv'
-import multer from 'multer';
-const upload = multer({ dest: 'uploads/' });
+
 
 dotenv.config()
 
