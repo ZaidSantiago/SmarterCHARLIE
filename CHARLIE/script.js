@@ -195,11 +195,9 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (isGenerating == true) {
     console.log(isGenerating)
-    e.preventDefault();
     return
   }
   else if (isGenerating == false) {
-    e.preventDefault();
     console.log(isGenerating)
     const messageText = message.value;
     const newMessage = {"role": "user", "content": `${messageText.trim()}`}
