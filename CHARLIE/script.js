@@ -193,11 +193,11 @@ function chatStripe(isAi, value, uniqueId) {
 // Handling Forms Submit
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (isGenerating == true) {
+  if (isGenerating == true || chatContainer.innerHTML.trim() == "") {
     console.log(isGenerating)
     return
   }
-  else if (isGenerating == false) {
+  else if (isGenerating == false)  {
     console.log(isGenerating)
     const messageText = message.value;
     const newMessage = {"role": "user", "content": `${messageText.trim()}`}
@@ -235,21 +235,19 @@ form.addEventListener('submit', (e) => {
 })
 
 message.addEventListener('keydown', (e) => {
-    if (e.key === "Enter" && e.shiftKey) { 
-        return
+  if (e.key === "Enter" && e.shiftKey) { 
+    return
+  }
+  else if (e.key === "Enter") {
+    if (isGenerating == true || message.value.trim() === "") {
+      console.log(isGenerating);
+      return
     }
-    else if (e.key === "Enter") {
-      if (isGenerating == true) {
-        console.log(isGenerating)
-        return
-      }
-      else if (isGenerating === false) {
-        console.log(isGenerating)
-        e.preventDefault();
-        form.dispatchEvent(new Event("submit")); 
-        isGenerating = true;
-      }
-      
-     
+    else if (isGenerating === false) {
+      console.log(isGenerating)
+      e.preventDefault();
+      form.dispatchEvent(new Event("submit")); 
+      isGenerating = true;
+    }
   }
 });
