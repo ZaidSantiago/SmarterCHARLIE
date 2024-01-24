@@ -9,6 +9,8 @@ const botImageURL = '/assets/bot-61bdb6bf.svg';
 const userImageURL = "/assets/user-bcdeb18e.svg";
 let loadInterval
 
+const isGenerating = false
+
 document.getElementById('backgroundButton').addEventListener('click', function () {
   const app = document.getElementById('app');
   app.classList.toggle('gif-background');
@@ -121,7 +123,7 @@ function typeText(element, texts) {
               window.open('https://www.youtube.com/watch?v=6HoyuPW9vcw');
             }
             if (texts.toLowerCase().includes("searching for")) {
-              const searchQuery = texts + texts.replace("Searching for", "").trim() + texts.replace("...","").trim() + texts.replace(".","").trim();
+              const searchQuery = texts + texts.replace("Searching for", "").trim() + texts.replace("...","").trim() + texts.replace(".","").trim() + texts.replace("google","").trim();
               const encodedQuery = encodeURIComponent(searchQuery); // Encode the query
             
               // Construct the Google search URL
@@ -187,6 +189,10 @@ function chatStripe(isAi, value, uniqueId) {
 
 // Handling Forms Submit
 form.addEventListener('submit', (e) => {
+  if (isGenerating == true) {
+    return
+  }
+  else {
     e.preventDefault();
     const messageText = message.value;
     const newMessage = {"role": "user", "content": `${messageText.trim()}`}
@@ -220,6 +226,7 @@ form.addEventListener('submit', (e) => {
         typeText(messageDiv, parsedData)
         
     })
+  }
 })
 
 message.addEventListener('keydown', (e) => {
@@ -227,7 +234,15 @@ message.addEventListener('keydown', (e) => {
         return
     }
     else if (e.key === "Enter") {
-      e.preventDefault();
-      form.dispatchEvent(new Event("submit")); 
+      if (isGenerating == true) {
+        return
+      }
+      else {
+        isGenerating = true;
+        e.preventDefault();
+        form.dispatchEvent(new Event("submit")); 
+      }
+      
+     
   }
 });
