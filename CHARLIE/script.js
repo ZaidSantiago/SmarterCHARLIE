@@ -126,21 +126,24 @@ function typeText(element, texts) {
               window.open('https://www.youtube.com/watch?v=6HoyuPW9vcw');
             }
             if (texts.toLowerCase().includes("searching for")) {
-              const searchQuery = texts + texts.replace("Searching for", "").trim() + texts.replace("...","").trim() + texts.replace(".","").trim() + texts.replace("google","").trim();
-              const encodedQuery = encodeURIComponent(searchQuery); // Encode the query
-            
+              // Remove specified phrases and characters
+              let searchQuery = texts.trim().replace("Searching for","").replace("...","").replace(".","").replace("google","");
+          
+              // Encode the query
+              let encodedQuery = encodeURIComponent(searchQuery);
+          
               // Construct the Google search URL
-              const googleSearchURL = `https://www.google.com/search?q=${encodedQuery}`;
-            
+              let googleSearchURL = "https://www.google.com/search?q=" + encodedQuery;
+          
               // Open a new tab with the Google search URL
-              const newTab = window.open(googleSearchURL, "_blank");
-            
+              let newTab = window.open(googleSearchURL, "_blank");
+          
               if (newTab) {
-                console.log(`Initiated a Google search for "${searchQuery}".`);
+                  console.log("Initiated a Google search for " + searchQuery + ".");
               } else {
-                console.log("Failed to open a new tab. Please enable pop-ups for this site.");
+                  console.log("Failed to open a new tab. Please enable pop-ups for this site.");
               }
-            }
+          }
         }
     }, 40)
 }
