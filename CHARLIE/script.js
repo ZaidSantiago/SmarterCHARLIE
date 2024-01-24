@@ -10,6 +10,7 @@ const userImageURL = "/assets/user-bcdeb18e.svg";
 let loadInterval
 
 const isGenerating = false
+console.log(isGenerating)
 
 document.getElementById('backgroundButton').addEventListener('click', function () {
   const app = document.getElementById('app');
@@ -52,6 +53,7 @@ function typeText(element, texts) {
             clearInterval(interval)
             element.innerHTML = marked(texts);
             isGenerating = false
+            console.log(isGenerating)
             if (texts.includes("hi") || texts.includes("Hi"))  {
               console.log("hi");
             }
@@ -191,9 +193,11 @@ function chatStripe(isAi, value, uniqueId) {
 // Handling Forms Submit
 form.addEventListener('submit', (e) => {
   if (isGenerating == true) {
+    console.log(isGenerating)
     return
   }
   else if (isGenerating == false) {
+    console.log(isGenerating)
     e.preventDefault();
     const messageText = message.value;
     const newMessage = {"role": "user", "content": `${messageText.trim()}`}
@@ -236,9 +240,11 @@ message.addEventListener('keydown', (e) => {
     }
     else if (e.key === "Enter") {
       if (isGenerating == true) {
+        console.log(isGenerating)
         return
       }
       else if (isGenerating === false) {
+        console.log(isGenerating)
         e.preventDefault();
         form.dispatchEvent(new Event("submit")); 
         isGenerating = true;
