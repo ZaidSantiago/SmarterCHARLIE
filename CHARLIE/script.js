@@ -51,6 +51,7 @@ function typeText(element, texts) {
         } else {
             clearInterval(interval)
             element.innerHTML = marked(texts);
+            isGenerating = false
             if (texts.includes("hi") || texts.includes("Hi"))  {
               console.log("hi");
             }
@@ -192,7 +193,7 @@ form.addEventListener('submit', (e) => {
   if (isGenerating == true) {
     return
   }
-  else {
+  else if (isGenerating == false) {
     e.preventDefault();
     const messageText = message.value;
     const newMessage = {"role": "user", "content": `${messageText.trim()}`}
@@ -237,10 +238,10 @@ message.addEventListener('keydown', (e) => {
       if (isGenerating == true) {
         return
       }
-      else {
-        isGenerating = true;
+      else if (isGenerating === false) {
         e.preventDefault();
         form.dispatchEvent(new Event("submit")); 
+        isGenerating = true;
       }
       
      
