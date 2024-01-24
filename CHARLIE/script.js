@@ -9,7 +9,7 @@ const botImageURL = '/assets/bot-61bdb6bf.svg';
 const userImageURL = "/assets/user-bcdeb18e.svg";
 let loadInterval
 
-const isGenerating = false
+let isGenerating = false
 console.log(isGenerating)
 
 document.getElementById('backgroundButton').addEventListener('click', function () {
