@@ -193,7 +193,7 @@ function chatStripe(isAi, value, uniqueId) {
 // Handling Forms Submit
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (isGenerating == true || chatContainer.innerHTML.trim() == "") {
+  if (isGenerating == true || message.value.trim() === "") {
     console.log(isGenerating)
     return
   }
